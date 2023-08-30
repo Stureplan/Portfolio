@@ -2324,11 +2324,14 @@ input, select, textarea {
 			min-height: 100%;
 			max-width: 100%;
 			max-height: 100%;
-			width: auto; 
-			height: auto; 
+			/*width: auto;
+			height: auto;*/
+			
+			
 			/*z-index: -100;
 			background-size: cover;*/
-			
+			width: 100vw;
+			height: 51vh;
 			object-fit: cover;
 		}
 
@@ -2647,43 +2650,12 @@ input, select, textarea {
 					width: 100%;
 				}
 
-				.tiles article > .image:before {
-					pointer-events: none;
-					-moz-transition: background-color 0.5s ease, opacity 0.5s ease;
-					-webkit-transition: background-color 0.5s ease, opacity 0.5s ease;
-					-ms-transition: background-color 0.5s ease, opacity 0.5s ease;
-					transition: background-color 0.5s ease, opacity 0.5s ease;
-					content: '';
-					display: block;
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					opacity: 0.5;
-					z-index: 1;
-
-					height: 8%;
-					margin-top: 85%;
-					
-					background-color: #ffffff;
-				}
-
-			body:not(.is-touch) .tiles article:hover > .image {
-				-moz-transform: scale(1.0);
-				-webkit-transform: scale(1.0);
-				-ms-transform: scale(1.0);
-				transform: scale(1.0);
+			body:not(.is-touch) .tiles article:hover {
+				-moz-transform: scale(1.025);
+				-webkit-transform: scale(1.025);
+				-ms-transform: scale(1.025);
+				transform: scale(1.025);
 			}
-			
-
-				body:not(.is-touch) .tiles article:hover > .image:before {
-					background-color: #ffffff;
-					opacity: 0.25;
-				}
-
-				body:not(.is-touch) .tiles article:hover > .image:after {
-					opacity: 0;
-				}
 
 			body:not(.is-touch) .tiles article:hover .content {
 				max-height: 0em;
