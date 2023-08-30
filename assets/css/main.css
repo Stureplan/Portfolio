@@ -182,7 +182,7 @@ input, select, textarea {
 
 			h1 {
 				font-size: 2em;
-				margin: 0 0 1em 0;
+				margin: 0 0 0 0;
 			}
 
 		}
@@ -2804,24 +2804,10 @@ input, select, textarea {
 				from {
 					transform: rotate(0deg);
 				}
-				50% {
-					transform: rotate(180deg);
-				}
 				to {
 					transform: rotate(360deg);
 				}
-			}
-
-			@keyframes scale {
-				from {
-				}
-				50% {
-				}
-				to {
-				}
-			}
-
-			
+			}			
 
 			#header .logo .symbol {
 				margin-right: 0.15em;
@@ -3136,8 +3122,8 @@ input, select, textarea {
 	#footer {
 		padding: 5em 0 6em 0 ;
 		background-color: #f6f6f6;
+		justify-content: center;
 	}
-
 		#footer > .inner {
 			justify-content: center;
 			display: -moz-flex;
@@ -3153,19 +3139,17 @@ input, select, textarea {
 			-ms-flex-direction: row;
 			flex-direction: row;
 		}
+			#footer > .inner section > h2 {
+				padding: 0em 0 0.5em 0;
+				text-align: center;
+			}
+			#footer > .inner section > h4 {
+				text-align: center;
+				text-transform: none;
 
+			}
 			#footer > .inner > * > :last-child {
 				margin-bottom: 0;
-			}
-
-			#footer > .inner section:nth-child(1) {
-				width: calc(66% - 2.5em);
-				margin-right: 2.5em;
-			}
-
-			#footer > .inner section:nth-child(2) {
-				width: calc(33% - 2.5em);
-				margin-left: 2.5em;
 			}
 
 		@media screen and (max-width: 1280px) {
@@ -3175,12 +3159,10 @@ input, select, textarea {
 			}
 
 				#footer > .inner section:nth-child(1) {
-					width: calc(66% - 1.25em);
 					margin-right: 1.25em;
 				}
 
 				#footer > .inner section:nth-child(2) {
-					width: calc(33% - 1.25em);
 					margin-left: 1.25em;
 				}
 
