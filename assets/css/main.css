@@ -167,10 +167,10 @@ input, select, textarea {
 	}
 
 	h1 {
-		font-size: 2.75em;
+		font-size: 1.75em;
 		font-weight: 700;
 		line-height: 1.3;
-		margin: 0 0 1em 0;
+		margin: 0 0 0 0;
 		letter-spacing: -0.035em;
 	}
 
@@ -200,7 +200,7 @@ input, select, textarea {
 		line-height: 1.5;
 		margin: 0 0 0 0;
 		text-transform: uppercase;
-		letter-spacing: 0.35em;
+		letter-spacing: 0.1em;
 	}
 
 		h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -2042,6 +2042,7 @@ input, select, textarea {
 	ul.icons {
 		cursor: default;
 		list-style: none;
+		justify-content: center;
 		padding-left: 0;
 		margin: -1em 0 2em -1em;
 	}
@@ -2327,8 +2328,8 @@ input, select, textarea {
 			height: auto; 
 			/*z-index: -100;
 			background-size: cover;*/
-			object-fit: none;
 			
+			object-fit: cover;
 		}
 
 		.image img {
@@ -2598,14 +2599,14 @@ input, select, textarea {
 			transition: transform 0.5s ease, opacity 0.5s ease;
 			position: relative;
 			width: calc(33.33333% - 2.5em);
-			
 			/*margin: 2.5em 0 0 2.5em;*/
+
 			margin: 0.5em 0.5em 0.5em 0.5em;
 		}
 
 			.tiles article > .overlay {
 				position: absolute; 
-				background: rgba(255, 255, 255, 0.2);
+				background: rgba(127, 127, 127, 0.25);
 				
 				/* center overlay text */
 				display: flex;
@@ -2614,7 +2615,7 @@ input, select, textarea {
 				left: 0;
 				bottom: 0;
 				width: 100%;
-				height: 20%;
+				height: 10%;
 				pointer-events: none;
 			}
 
@@ -2624,7 +2625,7 @@ input, select, textarea {
 					text-align: center;
 					text-decoration: none;
 					z-index: 3;
-					/* title text */
+					/* article title text */
 				}
 
 			.tiles article > .image {
@@ -2638,6 +2639,7 @@ input, select, textarea {
 				height: 100%;
 				border-radius: 12px;
 				overflow: hidden;
+				object-fit: cover;
 			}
 
 				.tiles article > .image img {
@@ -2773,34 +2775,58 @@ input, select, textarea {
 	#header {
 		padding: 2em 0 0.1em 0 ;
 	}
-
 		#header .logo {
 			display: block;
+			max-width: fit-content;
 			border-bottom: 0;
 			color: inherit;
 			font-weight: 600;
-			letter-spacing: 0.3em;
+			letter-spacing: 0.1em;
 			margin: 0 0 0 0;
 			text-decoration: none;
 			text-transform: uppercase;
-			display: inline-block;
 			justify-content: start;
 		}
 
 			#header .logo > * {
-				display: inline-block;
 				vertical-align: middle;
 			}
 
-			#header .logo .symbol {
-				margin-right: 0.65em;
+			#header .logo img {
+				width: 1.5em;
+				height: 1.5em;
+				margin: 0 0.5em 0 0;
+
+				animation: rotation 1s infinite linear;
 			}
 
-				#header .logo .symbol img {
-					display: block;
-					width: 2em;
-					height: 2em;
+			@keyframes rotation {
+				from {
+					transform: rotate(0deg);
 				}
+				50% {
+					transform: rotate(180deg);
+				}
+				to {
+					transform: rotate(360deg);
+				}
+			}
+
+			@keyframes scale {
+				from {
+				}
+				50% {
+				}
+				to {
+				}
+			}
+
+			
+
+			#header .logo .symbol {
+				margin-right: 0.15em;
+			}
+
 
 		#header nav {
 			position: fixed;
@@ -3113,6 +3139,7 @@ input, select, textarea {
 	}
 
 		#footer > .inner {
+			justify-content: center;
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: -ms-flex;
@@ -3140,33 +3167,6 @@ input, select, textarea {
 				width: calc(33% - 2.5em);
 				margin-left: 2.5em;
 			}
-
-			#footer > .inner .copyright {
-				width: 100%;
-				padding: 0;
-				margin-top: 5em;
-				list-style: none;
-				font-size: 0.8em;
-				color: rgba(88, 88, 88, 0.5);
-			}
-
-				#footer > .inner .copyright a {
-					color: inherit;
-				}
-
-				#footer > .inner .copyright li {
-					display: inline-block;
-					border-left: solid 1px rgba(88, 88, 88, 0.15);
-					line-height: 1;
-					padding: 0 0 0 1em;
-					margin: 0 0 0 1em;
-				}
-
-					#footer > .inner .copyright li:first-child {
-						border-left: 0;
-						padding-left: 0;
-						margin-left: 0;
-					}
 
 		@media screen and (max-width: 1280px) {
 
