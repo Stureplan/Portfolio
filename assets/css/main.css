@@ -3118,7 +3118,15 @@ input, select, textarea {
 			#footer > .inner section > h4 {
 				text-align: center;
 				text-transform: none;
-
+			}
+			#footer > .inner section > a {
+				text-align: center;
+				text-transform: none;
+				font-weight: 900;
+				line-height: 1.5;
+				margin: 0 0 0 0;
+				letter-spacing: 0.1em;
+				color: inherit;
 			}
 			#footer > .inner > * > :last-child {
 				margin-bottom: 0;
@@ -3224,3 +3232,39 @@ input, select, textarea {
 			}
 
 		}
+
+/* Page */
+#page_text {
+	justify-content: center;
+	align-items: center;
+	padding: 0.0em 3.0em 0.0em 3.0em;
+}
+
+#main #page_text > h1 {
+	text-align: center;
+}
+
+#main #page_text > h2 {
+	text-align: center;
+}
+
+#main #page_text > a {
+	text-align: center;
+}
+
+#page_text > .tags {
+	opacity: 0.75;
+	font-style: italic;
+	text-align: center;
+	
+}
+
+#page_video {
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+#page_video > video {
+	width: 80%;
+}
