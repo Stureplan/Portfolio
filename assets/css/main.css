@@ -3252,11 +3252,18 @@ input, select, textarea {
 	text-align: center;
 }
 
+#main #page_text > img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
+	padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
 #page_text > .tags {
 	opacity: 0.75;
 	font-style: italic;
-	text-align: center;
-	
+	text-align: center;	
 }
 
 #page_video {
